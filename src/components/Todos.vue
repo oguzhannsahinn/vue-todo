@@ -1,10 +1,9 @@
 <template>
     <div>
-        <h2> My Todo List </h2>
-
+        <h2> My Todo List </h2> 
         <ul>
             <li v-bind:key="todo.id" v-for="todo in todos">
-                <Todo v-bind:todo="todo" />
+                <Todo v-bind:todo="todo" v-on:delete-todo="$emit('delete-todo', todo.id)" />
             </li>
         </ul>
 
@@ -13,12 +12,11 @@
 
 <script>
 
-import Todo from './Todo';
+import Todo from './Todo'; 
 
 export default {
     name: 'Todos',
     components: {
-        // eslint-disable-next-line vue/no-unused-components
         Todo
     },
     props: [
@@ -28,4 +26,8 @@ export default {
 </script>
 
 <style scoped>
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 </style>
