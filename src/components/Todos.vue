@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2> My Todo List </h2> 
+        <h1> Todo List </h1> 
         <ul>
             <li v-bind:key="todo.id" v-for="todo in todos">
                 <Todo v-bind:todo="todo" v-on:delete-todo="$emit('delete-todo', todo.id)" />
@@ -26,8 +26,13 @@ export default {
 </script>
 
 <style scoped>
-    h2 {
+
+    ul {
+        list-style-type: none;
+    }
+
+    h1 {
         text-align: center;
-        margin-bottom: 40px;
+        color: #4461d9;
     }
 </style>

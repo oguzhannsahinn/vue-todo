@@ -60,13 +60,19 @@ export default {
 </script>
 
 <style> 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand|Montserrat&display=swap');
+
   #app{
     width:500px;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 22px;
     height:auto;
     margin: auto;
-    border: 2px solid tomato;
+    box-shadow: 2px 5px 25px 2px rgba(50, 50, 50, .25);
     margin-top: 100px;
     padding: 30px;
+    border-radius: 4px;
   }
 
   #app h1 {
